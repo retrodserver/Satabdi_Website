@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/logo.jpg";
 
 function Header({ dark, setDark }) {
   const location = useLocation();
@@ -13,9 +14,12 @@ function Header({ dark, setDark }) {
     >
       {/* Logo */}
       <div className="flex items-center gap-3 sm:gap-6">
-        {/* Logo image removed */}
-        <span className="font-extrabold text-xl sm:text-2xl md:text-3xl text-red-600 drop-shadow-lg tracking-widest italic uppercase" style={{ letterSpacing: '0.15em', textShadow: '2px 2px 8px rgba(220,38,38,0.2)' }}>
-          HOTEL SATABDI
+        <img
+          src={logo}
+          alt="Hotel Satabdi Logo"
+          className="h-12 sm:h-16 w-auto object-contain rounded-full drop-shadow-lg"
+        />
+        <span className="font-extrabold text-xl sm:text-2xl md:text-3xl bg-gradient-to-r from-blue-700 via-pink-500 to-red-500 bg-clip-text text-transparent tracking-widest italic">
         </span>
       </div>
 
@@ -86,9 +90,7 @@ function Header({ dark, setDark }) {
       {/* Mobile Nav */}
       {menuOpen && (
         <nav
-          className={`absolute top-full left-0 w-full bg-white dark:bg-gray-900 flex flex-col gap-3 font-medium px-4 py-3 shadow-md md:hidden transition-transform transform ${
-            menuOpen ? "scale-y-100" : "scale-y-0"
-          } origin-top`}
+          className={`absolute top-full left-0 w-full bg-white dark:bg-gray-900 flex flex-col gap-3 font-medium px-4 py-3 shadow-md md:hidden transition-transform transform origin-top`}
         >
           {[{ path: "/", label: "Home" }, { path: "/rooms", label: "Rooms" }, { path: "/services", label: "Services" }, { path: "/contact", label: "Contact" }].map(
             (link) => (
