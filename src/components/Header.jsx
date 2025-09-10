@@ -39,6 +39,17 @@ function Header({ dark, setDark }) {
         >
           Home
         </Link>
+        {/* ...existing nav links... */}
+        <Link
+          to="/login"
+          className={`px-3 py-1 rounded-full font-semibold transition ${
+            dark
+              ? "hover:bg-gray-800 hover:text-blue-400"
+              : "hover:bg-blue-100 hover:text-blue-700"
+          }`}
+        >
+          Login
+        </Link>
         <Link
           to="/rooms"
           className={`px-3 py-1 rounded-full font-semibold transition ${
