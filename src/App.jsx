@@ -15,46 +15,38 @@ import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 
 function App() {
-  const [dark, setDark] = useState(false);
-
-  useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [dark]);
+  // Theme functionality removed
 
   return (
     <Router>
-      <div className={`min-h-screen w-full max-w-full overflow-x-hidden ${dark ? "bg-gray-900" : "bg-white"}`}> 
-        <Header dark={dark} setDark={setDark} />
+  <div className="min-h-screen w-full max-w-full bg-white">
+        <Header />
         <Routes>
           <Route path="/" element={
             <div>
-              <Hero dark={dark} />
-              <About dark={dark} />
-              <Rooms dark={dark} />
-              <Facilities dark={dark} />
-              <Services dark={dark} />
-              <Offers dark={dark} />
-              <Gallery dark={dark} />
-              <Testimonials dark={dark} />
-              <Blog dark={dark} />
-              <Footer dark={dark} />
+              <Hero />
+              <About />
+              <Rooms />
+              <Facilities />
+              <Services />
+              <Offers />
+              <Gallery />
+              <Testimonials />
+              <Blog />
+              <Footer />
             </div>
           } />
           <Route path="/blog/:id" element={<BlogDetail />} />
-          <Route path="/rooms" element={<><Rooms dark={dark} /><Footer dark={dark} /></>} />
-          <Route path="/services" element={<><Services dark={dark} /><Footer dark={dark} /></>} />
-          <Route path="/facilities" element={<Facilities dark={dark} />} />
-          <Route path="/offers" element={<Offers dark={dark} />} />
-          <Route path="/gallery" element={<Gallery dark={dark} />} />
-          <Route path="/testimonials" element={<Testimonials dark={dark} />} />
-          <Route path="/blog" element={<Blog dark={dark} />} />
-          <Route path="/about" element={<About dark={dark} />} />
-          <Route path="/footer" element={<Footer dark={dark} />} />
-          <Route path="/contact" element={<><Contact dark={dark} /><Footer dark={dark} /></>} />
+          <Route path="/rooms" element={<><Rooms /><Footer /></>} />
+          <Route path="/services" element={<><Services /><Footer /></>} />
+          <Route path="/facilities" element={<Facilities />} />
+          <Route path="/offers" element={<Offers />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/footer" element={<Footer />} />
+          <Route path="/contact" element={<><Contact /><Footer /></>} />
         </Routes>
       </div>
     </Router>

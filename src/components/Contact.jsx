@@ -3,19 +3,19 @@ import React from "react";
 function Contact({ dark }) {
   return (
     <section
-      className={`py-12 px-4 sm:px-12 md:px-32 flex flex-col items-center justify-center min-h-[60vh] ${
+      className={`mt-24 py-12 px-4 sm:px-8 lg:px-16 flex flex-col items-center justify-center min-h-[60vh] ${
         dark ? "bg-gray-900 text-blue-100" : "bg-white text-blue-900"
       }`}
     >
       {/* Heading */}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 tracking-tight text-blue-700 dark:text-blue-200 drop-shadow-lg">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-10 tracking-tight text-blue-700 dark:text-blue-200 drop-shadow-md text-center">
         Contact Us
       </h2>
 
       {/* Contact Info Grid */}
-      <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Address */}
-        <div className="flex items-start gap-4 p-6 rounded-xl border border-blue-100 dark:border-blue-900 bg-blue-50 dark:bg-gray-800 shadow-sm hover:shadow-md transition">
+        <div className="flex items-start gap-4 p-6 rounded-2xl border border-blue-100 dark:border-blue-800 bg-blue-50 dark:bg-gray-800 shadow hover:shadow-lg transition-all duration-300">
           <span className="flex-shrink-0 text-blue-600 dark:text-blue-300">
             {/* Map Pin Icon */}
             <svg
@@ -44,18 +44,30 @@ function Contact({ dark }) {
               Our Address
             </h3>
             <p className="text-base leading-relaxed text-gray-700 dark:text-blue-100">
-              2690 Hiltona Street Victoria Road,
-              <br /> New York, Canada
+              Kalinga Studio, Plot No : 41C, near fitness studio Gym, Bharatpur,
+              <br />
+              Bhubaneswar, Odisha 751003
+              <br />
+              7QQJ+5F Bhubaneswar, Odisha
+              <br />
+              <a
+                href="https://maps.app.goo.gl/9TrdjihNkSfiB48g8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-2 text-blue-600 dark:text-blue-300 underline hover:text-blue-800"
+              >
+                View Location on Google Maps
+              </a>
             </p>
           </div>
         </div>
 
         {/* Phone */}
-        <div className="flex items-start gap-4 p-6 rounded-xl border border-blue-100 dark:border-blue-900 bg-blue-50 dark:bg-gray-800 shadow-sm hover:shadow-md transition">
+        <div className="flex items-start gap-4 p-6 rounded-2xl border border-blue-100 dark:border-blue-800 bg-blue-50 dark:bg-gray-800 shadow hover:shadow-lg transition-all duration-300">
           <span className="flex-shrink-0 text-blue-600 dark:text-blue-300">
             {/* Phone Icon */}
             <svg
-            //   xmlns="http://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg"
               className="w-10 h-10"
               fill="none"
               viewBox="0 0 24 24"
@@ -70,18 +82,18 @@ function Contact({ dark }) {
             </svg>
           </span>
           <div className="text-left">
-            <h3 className="text-lg font-semibold mb-1 text-blue-900 dark:text-blue-200">
+            <h3 className="text-lg font-semibold mb-2 text-blue-900 dark:text-blue-200">
               Phone Number
             </h3>
-            <p className="text-base leading-relaxed text-gray-700 dark:text-blue-100">
-              +01 234 567 890
-              <br /> +09 876 543 210
+            <p className="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-blue-100">
+              +91-xxxxxxxxx
+              <br /> +91-xxxxxxxxx
             </p>
           </div>
         </div>
 
         {/* Email */}
-        <div className="flex items-start gap-4 p-6 rounded-xl border border-blue-100 dark:border-blue-900 bg-blue-50 dark:bg-gray-800 shadow-sm hover:shadow-md transition">
+        <div className="flex items-start gap-4 p-6 rounded-2xl border border-blue-100 dark:border-blue-800 bg-blue-50 dark:bg-gray-800 shadow hover:shadow-lg transition-all duration-300">
           <span className="flex-shrink-0 text-blue-600 dark:text-blue-300">
             {/* Mail Icon */}
             <svg
@@ -100,12 +112,12 @@ function Contact({ dark }) {
             </svg>
           </span>
           <div className="text-left">
-            <h3 className="text-lg font-semibold mb-1 text-blue-900 dark:text-blue-200">
+            <h3 className="text-lg font-semibold mb-2 text-blue-900 dark:text-blue-200">
               Email Address
             </h3>
-            <p className="text-base leading-relaxed text-gray-700 dark:text-blue-100">
-              support24@Rotal.com
-              <br /> contact@Rotal.com
+            <p className="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-blue-100">
+              support24@satabdi.com
+              <br /> contact@satabdi.com
             </p>
           </div>
         </div>
@@ -113,4 +125,5 @@ function Contact({ dark }) {
     </section>
   );
 }
+
 export default Contact;
