@@ -72,7 +72,7 @@ function Menu() {
 
       {/* Add New Menu Item Form */}
       <div className="max-w-2xl mx-auto mt-12">
-        <form
+        {/* <form
           onSubmit={handleAdd}
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
         >
@@ -98,10 +98,10 @@ function Menu() {
           >
             Add
           </button>
-        </form>
+        </form> */}
 
         {/* Menu List */}
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {menuItems.map((item, idx) => (
             <li
               key={idx}
@@ -113,7 +113,7 @@ function Menu() {
               </span>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </section>
   );

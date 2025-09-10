@@ -4,18 +4,18 @@ function Contact({ dark }) {
   return (
     <section
       className={`mt-24 py-12 px-4 sm:px-8 lg:px-16 flex flex-col items-center justify-center min-h-[60vh] ${
-        dark ? "bg-gray-900 text-blue-100" : "bg-white text-blue-900"
+        dark ? "bg-gray-900 text-blue-100" : "bg-gradient-to-b from-blue-50 to-blue-100 text-blue-900"
       }`}
     >
       {/* Heading */}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-10 tracking-tight text-blue-700 dark:text-blue-200 drop-shadow-md text-center">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-center text-blue-700 dark:text-blue-200 drop-shadow-md tracking-tight">
         Contact Us
       </h2>
 
       {/* Contact Info Grid */}
-      <div className="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
         {/* Address */}
-        <div className="flex items-start gap-4 p-6 rounded-2xl border border-blue-100 dark:border-blue-800 bg-blue-50 dark:bg-gray-800 shadow hover:shadow-lg transition-all duration-300">
+        <div className="flex flex-col sm:flex-row items-start gap-4 p-6 rounded-2xl border border-blue-100 dark:border-blue-800 bg-blue-50 dark:bg-gray-800 shadow hover:shadow-lg transition-all duration-300">
           <span className="flex-shrink-0 text-blue-600 dark:text-blue-300">
             {/* Map Pin Icon */}
             <svg
@@ -39,7 +39,7 @@ function Contact({ dark }) {
               />
             </svg>
           </span>
-          <div className="text-left">
+          <div className="text-left mt-2 sm:mt-0">
             <h3 className="text-lg font-semibold mb-1 text-blue-900 dark:text-blue-200">
               Our Address
             </h3>
@@ -56,7 +56,7 @@ function Contact({ dark }) {
                 rel="noopener noreferrer"
                 className="inline-block mt-2 text-blue-600 dark:text-blue-300 underline hover:text-blue-800"
               >
-                View Location on Google Maps
+                View on Google Maps
               </a>
             </p>
           </div>
@@ -121,6 +121,20 @@ function Contact({ dark }) {
             </p>
           </div>
         </div>
+      </div>
+
+      {/* Google Map */}
+      <div className="w-full max-w-6xl rounded-xl overflow-hidden shadow-lg">
+        <iframe
+          title="Google Map Location"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.217073585857!2d72.8310600752037!3d19.17377248203559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7b7b7b7b7b7%3A0x9TrdjihNkSfiB48g8!2s2690%20Hiltona%20Street%20Victoria%20Road%2C%20New%20York%2C%20Canada!5e0!3m2!1sen!2sin!4v1694367890123!5m2!1sen!2sin"
+          width="100%"
+          height="350"
+          className="border-0"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </section>
   );
