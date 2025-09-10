@@ -60,7 +60,7 @@ function BlogDetail() {
         <div className="flex-1">
           {/* Back button */}
           <div className="mb-6">
-            <Link to="/blogs" className="text-blue-600 hover:underline text-sm">
+            <Link to="/blog" className="text-blue-600 hover:underline text-sm">
               ← Back to Blogs
             </Link>
           </div>
