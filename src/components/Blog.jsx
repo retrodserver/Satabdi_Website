@@ -1,10 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import blog1 from "../assets/blog1.jpg";
 import blog2 from "../assets/blog2.jpg";
 import blog3 from "../assets/blog3.jpg";
 import blog4 from "../assets/blog4.jpg";
 
  function Blog() {
+  const navigate = useNavigate();
   return (
     <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-16 text-center bg-gray-50 dark:bg-gray-900">
       {/* Heading */}
@@ -28,7 +30,10 @@ import blog4 from "../assets/blog4.jpg";
             <div className="text-gray-500 text-sm mb-4">
               Feb 24, 2025 • 08 min read
             </div>
-            <button className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+            <button
+              className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+              onClick={() => navigate('/blog/1')}
+            >
               Read More
             </button>
           </div>
@@ -48,7 +53,10 @@ import blog4 from "../assets/blog4.jpg";
             <div className="text-gray-500 text-sm mb-4">
               Mar 10, 2025 • 05 min read
             </div>
-            <button className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+            <button
+              className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+              onClick={() => navigate('/blog/2')}
+            >
               Read More
             </button>
           </div>
@@ -68,7 +76,10 @@ import blog4 from "../assets/blog4.jpg";
             <div className="text-gray-500 text-sm mb-4">
               Apr 2, 2025 • 07 min read
             </div>
-            <button className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+            <button
+              className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+              onClick={() => navigate('/blog/3')}
+            >
               Read More
             </button>
           </div>
@@ -88,7 +99,10 @@ import blog4 from "../assets/blog4.jpg";
             <div className="text-gray-500 text-sm mb-4">
               May 18, 2025 • 06 min read
             </div>
-            <button className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+            <button
+              className="mt-auto bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+              onClick={() => navigate('/blog/4')}
+            >
               Read More
             </button>
           </div>

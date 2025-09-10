@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import bedroom1 from "../assets/bedroom1.jpg";
@@ -7,55 +7,10 @@ import bedroom3 from "../assets/bedroom3.jpg";
 import seafacebed from "../assets/seafacebed.jpg";
 
 function Rooms() {
-  const [checkin, setCheckin] = useState("");
-  const [checkout, setCheckout] = useState("");
-
-  const handleCheckAvailability = () => {
-    if (!checkin || !checkout) {
-      toast.error("Please select both check-in and check-out dates.");
-      return;
-    }
-    if (checkout <= checkin) {
-      toast.error("Check-out date must be after check-in date.");
-      return;
-    }
-    toast.success(`Checking availability from ${checkin} to ${checkout}`);
-  };
 
   return (
     <section className="py-6 sm:py-10 md:py-16 px-3 sm:px-6 md:px-12 text-center bg-gray-50 dark:bg-gray-900">
-      {/* Date Inputs */}
-      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-4">
-        <div>
-          <label htmlFor="checkin" className="block text-sm font-medium text-blue-900 dark:text-blue-200 mb-1">Check-in Date</label>
-          <input
-            type="date"
-            id="checkin"
-            name="checkin"
-            value={checkin}
-            onChange={e => setCheckin(e.target.value)}
-            className="rounded-lg border-gray-300 dark:border-gray-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-        <div>
-          <label htmlFor="checkout" className="block text-sm font-medium text-blue-900 dark:text-blue-200 mb-1">Check-out Date</label>
-          <input
-            type="date"
-            id="checkout"
-            name="checkout"
-            value={checkout}
-            onChange={e => setCheckout(e.target.value)}
-            className="rounded-lg border-gray-300 dark:border-gray-700 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-        </div>
-      </div>
-      <button
-        className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition mb-8"
-        onClick={handleCheckAvailability}
-      >
-        Check Availability
-      </button>
-      <ToastContainer position="top-center" autoClose={3000} />
+  {/* ...existing code... */}
       {/* Heading */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 dark:text-blue-200 mb-10">
         Luxury Rooms For Discerning Travelers
