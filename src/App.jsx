@@ -11,6 +11,9 @@ import Offers from "./components/Offers";
 import Gallery from "./components/Gallery";
 import Testimonials from "./components/Testimonials";
 import Blog from "./components/Blog";
+import TermsServices from "./components/TermsServices";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import CookiesPolicy from "./components/CookiesPolicy";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
@@ -49,6 +52,9 @@ function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="/contact" element={<><Contact /><Footer /></>} />
+          <Route path="/terms-services" element={<TermsServices />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/cookies-policy" element={<CookiesPolicy />} />
         </Routes>
       </div>
     </Router>

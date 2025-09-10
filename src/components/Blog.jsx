@@ -9,7 +9,7 @@ function Blog() {
   const navigate = useNavigate();
 
   return (
-    <section className="py-10 sm:py-14 md:py-20 px-4 sm:px-8 md:px-16 bg-gray-50 dark:bg-gray-900">
+  <section className="mt-16 py-10 sm:py-14 md:py-20 px-4 sm:px-8 md:px-16 bg-gray-50 dark:bg-gray-900">
       {/* Heading */}
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 dark:text-blue-200 text-center">
         Latest Blog

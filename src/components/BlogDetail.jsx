@@ -87,10 +87,10 @@ function BlogDetail() {
 
   return (
     <>
-      <section className="py-10 px-4 sm:px-8 lg:px-16 bg-gray-50 dark:bg-gray-900 min-h-screen">
+      <section className="mt-16 py-10 px-4 sm:px-8 lg:px-16 bg-gray-50 dark:bg-gray-900 min-h-screen">
         <div className="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto">
           {/* Main Blog Content */}
-          <article className="flex-1 max-w-prose mx-auto lg:mx-0">
+          <article className="flex-1 max-w-3xl mx-auto lg:mx-0 bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 lg:p-12">
             {/* Back button */}
             <div className="mb-6">
               <Link
@@ -127,7 +127,7 @@ function BlogDetail() {
           </article>
 
           {/* Sidebar: Other Blogs */}
-          <aside className="w-full lg:w-1/3 flex-shrink-0">
+          <aside className="w-full lg:w-1/3 flex-shrink-0 lg:sticky lg:top-24 lg:self-start">
             <h2 className="text-lg font-semibold mb-4 text-blue-800 dark:text-blue-200">
               Other Blogs
             </h2>

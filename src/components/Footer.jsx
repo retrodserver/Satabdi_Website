@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -22,15 +23,9 @@ function Footer() {
 
         {/* Links */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-sm sm:text-base font-medium">
-          {["Terms of Service", "Privacy Policy", "Cookies"].map(link => (
-            <a
-              key={link}
-              href="#"
-              className="hover:text-yellow-300 transition-colors"
-            >
-              {link}
-            </a>
-          ))}
+          <Link to="/terms-services" className="hover:text-yellow-300 transition-colors">Terms of Service</Link>
+          <Link to="/privacy-policy" className="hover:text-yellow-300 transition-colors">Privacy Policy</Link>
+          <Link to="/cookies-policy" className="hover:text-yellow-300 transition-colors">Cookies</Link>
         </div>
 
         {/* Contact Info */}
