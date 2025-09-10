@@ -41,14 +41,14 @@ function Rooms() {
   ];
 
   return (
-    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12 text-center bg-gray-50 dark:bg-gray-900">
+  <section className="mt-16 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12 text-center bg-gray-50 dark:bg-gray-900 mb-16 md:mb-24">
       {/* Heading */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 dark:text-blue-200 mb-10">
-        Luxury Rooms For Discerning Travelers
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-900 dark:text-blue-200 mb-6 px-2 sm:px-4 break-words">
+        LUXURY ROOMS FOR DISCERNING TRAVELERS
       </h2>
 
       {/* Responsive Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 justify-items-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 justify-items-center max-w-7xl mx-auto">
         {rooms.map((room, idx) => (
           <div
             key={idx}

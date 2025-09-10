@@ -11,6 +11,7 @@ import Offers from "./components/Offers";
 import Gallery from "./components/Gallery";
 import Testimonials from "./components/Testimonials";
 import Blog from "./components/Blog";
+import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 
@@ -45,6 +46,7 @@ function App() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/about" element={<About />} />
+          <Route path="/menu" element={<Menu />} />
           <Route path="/footer" element={<Footer />} />
           <Route path="/contact" element={<><Contact /><Footer /></>} />
         </Routes>

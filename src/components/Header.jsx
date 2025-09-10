@@ -25,11 +25,9 @@ function Header({ dark, setDark }) {
 
       {/* Desktop Nav */}
       <nav
-        className={`hidden md:flex gap-4 sm:gap-6 font-medium items-center ${
-          dark ? "text-gray-200" : "text-gray-700"
-        }`}
+        className={`hidden md:flex gap-4 sm:gap-6 font-medium items-center`}
       >
-        {[{ path: "/", label: "Home" }, { path: "/rooms", label: "Rooms" }, { path: "/services", label: "Services" }, { path: "/contact", label: "Contact" }].map(
+        {[{ path: "/", label: "Home" }, { path: "/rooms", label: "Rooms" }, { path: "/services", label: "Services" }, { path: "/menu", label: "Menu" }, { path: "/contact", label: "Contact" }].map(
           (link) => (
             <Link
               key={link.path}
@@ -92,7 +90,7 @@ function Header({ dark, setDark }) {
         <nav
           className={`absolute top-full left-0 w-full bg-white dark:bg-gray-900 flex flex-col gap-3 font-medium px-4 py-3 shadow-md md:hidden transition-transform transform origin-top`}
         >
-          {[{ path: "/", label: "Home" }, { path: "/rooms", label: "Rooms" }, { path: "/services", label: "Services" }, { path: "/contact", label: "Contact" }].map(
+          {[{ path: "/", label: "Home" }, { path: "/rooms", label: "Rooms" }, { path: "/services", label: "Services" }, { path: "/menu", label: "Menu" }, { path: "/contact", label: "Contact" }].map(
             (link) => (
               <Link
                 key={link.path}
