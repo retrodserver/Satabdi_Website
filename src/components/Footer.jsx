@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import logo from "../assets/logo.jpg";
+import logo1 from "../assets/logo1.png";
 
 function Footer() {
   return (
@@ -12,7 +12,7 @@ function Footer() {
         
         {/* Left: Logo + Explore Services */}
         <div className="flex flex-col items-center md:items-start gap-6">
-          <img src={logo} alt="Logo" className="w-32 sm:w-36 md:w-40 h-auto rounded-lg shadow-lg" />
+          <img src={logo1} alt="Logo" className="w-32 sm:w-36 md:w-40 h-auto" />
           
           <div className="flex flex-col items-center md:items-start gap-4">
             <h3 className="text-lg font-semibold tracking-wide">Explore Our Services:</h3>
