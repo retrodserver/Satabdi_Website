@@ -11,6 +11,7 @@ function Header({ dark, setDark }) {
     { path: "/rooms", label: "Rooms" },
     { path: "/services", label: "Services" },
     { path: "/menu", label: "Menu" },
+    { path: "/gallery", label: "Gallery" },
     { path: "/contact", label: "Contact" },
   ];
 

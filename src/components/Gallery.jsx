@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import hotel1 from "../assets/hotel1.jpg";
 import hotel2 from "../assets/hotel2.jpg";
 import hotel3 from "../assets/hotel3.jpg";
@@ -6,8 +7,9 @@ import hotel4 from "../assets/hotel4.jpg";
 import mainhotel from "../assets/mainhotel.jpg";
 
 function Gallery() {
+  const navigate = useNavigate();
   return (
-    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-16 text-center bg-gray-50">
+  <section className="mt-20 py-8 sm:py-12 md:py-16 px-4 sm:px-8 md:px-16 text-center bg-gray-50">
       <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 mb-4 sm:mb-6">
         Gallery
       </h2>
@@ -36,6 +38,15 @@ function Gallery() {
             />
           </div>
         ))}
+      </div>
+      {/* Centered Button at the bottom */}
+      <div className="flex justify-center mt-10">
+        <button
+          className="bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700 transition font-semibold"
+          onClick={() => navigate('/gallerygrid')}
+        >
+          View More
+        </button>
       </div>
     </section>
   );
