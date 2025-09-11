@@ -54,7 +54,7 @@ function Footer() {
             <h3 className="text-lg font-semibold tracking-wide">Contact Us:</h3>
             <p className="opacity-90">
               Kalinga Studio, Plot No : 41C, Near Fitness Studio Gym<br />
-              Bharatpur, Bhubaneswar, Odisha 751003
+              Bharatpur, Bhubaneswar, Odisha, 751003
             </p>
             <p><span className="font-semibold">Phone:</span> +91-xxxxxxxxxx</p>
             <p><span className="font-semibold">Email:</span> support@satabdi.com</p>

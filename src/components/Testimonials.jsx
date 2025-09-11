@@ -30,7 +30,7 @@ function Testimonials() {
     {
       img: feedback4,
       name: "Sara & Raj",
-      role: "Newlyweds",
+      role: "Newly Weds",
       review:
         "Our wedding was magical here! The event team made everything smooth and memorable.",
     },
