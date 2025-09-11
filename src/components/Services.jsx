@@ -34,9 +34,9 @@ const services = [
 
 function Services() {
   return (
-    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12 text-center bg-gray-50 overflow-x-hidden mt-4 md:mt-8">
+    <section className="mt-20 sm:mt-24 md:mt-28 py-8 sm:py-12 md:py-16 px-4 sm:px-6 md:px-12 text-center bg-gray-50 dark:bg-gray-900 overflow-x-hidden">
       {/* Heading */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 mb-10">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-900 dark:text-blue-200 mb-10">
         Explore Shatabdi Services
       </h2>
 

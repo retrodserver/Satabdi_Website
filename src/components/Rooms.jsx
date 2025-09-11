@@ -12,7 +12,7 @@ function Rooms() {
       rating: 5,
       bed: "King Bed",
       size: "1500 sqft / Room",
-      price: "$690 / NIGHT",
+      price: "₹900 / NIGHT",
     },
     {
       img: bedroom2,
@@ -20,7 +20,7 @@ function Rooms() {
       rating: 5,
       bed: "Twin Bed",
       size: "1800 sqft / Room",
-      price: "$850 / NIGHT",
+      price: "₹1500 / NIGHT",
     },
     {
       img: seafacebed,
@@ -28,7 +28,7 @@ function Rooms() {
       rating: 5,
       bed: "King Bed + Sea View",
       size: "2000 sqft / Room",
-      price: "$1200 / NIGHT",
+      price: "₹2500 / NIGHT",
     },
     {
       img: bedroom3,
@@ -36,7 +36,7 @@ function Rooms() {
       rating: 5,
       bed: "2 King Beds",
       size: "2500 sqft / Room",
-      price: "$1500 / NIGHT",
+      price: "₹3000 / NIGHT",
     },
   ];
 
