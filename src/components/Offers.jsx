@@ -8,7 +8,7 @@ function Offers() {
     {
       img: promo1,
       title: "25% Off Deluxe Rooms",
-      desc: "Book Now for a special discount!",
+      desc: "Book Now for a special discount & Get a amazing Package from our Side.",
       price: "$250",
     },
     {
