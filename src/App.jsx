@@ -18,13 +18,15 @@ import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import GalleryGrid from "./components/GalleryGrid";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   // Theme functionality removed
 
   return (
     <Router>
-  <div className="min-h-screen w-full max-w-full bg-white">
+      <ScrollToTop />
+      <div className="min-h-screen w-full max-w-full bg-white">
         <Header />
         <Routes>
           <Route path="/" element={
@@ -34,7 +36,6 @@ function App() {
               <Rooms />
               <Facilities />
               <Services />
-              <Offers />
               <Gallery />
               <Testimonials />
               <Blog />

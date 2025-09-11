@@ -3,19 +3,21 @@ import React from "react";
 function Contact({ dark }) {
   return (
     <section
-      className={`mt-24 py-12 px-4 sm:px-8 lg:px-16 flex flex-col items-center justify-center min-h-[60vh] ${
-        dark ? "bg-gray-900 text-blue-100" : "bg-gradient-to-b from-blue-50 to-blue-100 text-blue-900"
+      className={`mt-24 py-16 px-6 sm:px-10 lg:px-20 flex flex-col items-center justify-center min-h-[70vh] ${
+        dark
+          ? "bg-gray-900 text-blue-100"
+          : "bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300 text-gray-900"
       }`}
     >
       {/* Heading */}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-center text-blue-700 dark:text-blue-200 drop-shadow-md tracking-tight">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-14 text-center text-gray-800 dark:text-blue-200 drop-shadow-md tracking-tight">
         Contact Us
       </h2>
 
       {/* Contact Info Grid */}
-      <div className="max-w-6xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <div className="max-w-7xl w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-14">
         {/* Address */}
-        <div className="flex flex-col sm:flex-row items-start gap-4 p-6 rounded-2xl border border-blue-100 dark:border-blue-800 bg-blue-50 dark:bg-gray-800 shadow hover:shadow-lg transition-all duration-300">
+        <div className="flex items-start gap-4 p-8 rounded-2xl border border-gray-200 dark:border-blue-700 bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-all duration-300">
           <span className="flex-shrink-0 text-blue-600 dark:text-blue-300">
             {/* Map Pin Icon */}
             <svg
@@ -39,22 +41,21 @@ function Contact({ dark }) {
               />
             </svg>
           </span>
-          <div className="text-left mt-2 sm:mt-0">
-            <h3 className="text-lg font-semibold mb-1 text-blue-900 dark:text-blue-200">
+          <div className="text-left">
+            <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-blue-200">
               Our Address
             </h3>
             <p className="text-base leading-relaxed text-gray-700 dark:text-blue-100">
-              Kalinga Studio, Plot No : 41C, near fitness studio Gym, Bharatpur,
+              Kalinga Studio, Plot No : 41C, near Fitness Studio Gym,
+              Bharatpur, Bhubaneswar, Odisha 751003
               <br />
-              Bhubaneswar, Odisha 751003
-              <br />
-              7QQJ+5F Bhubaneswar, Odisha
+              <span className="font-medium">7QQJ+5F Bhubaneswar, Odisha</span>
               <br />
               <a
                 href="https://maps.app.goo.gl/9TrdjihNkSfiB48g8"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-2 text-blue-600 dark:text-blue-300 underline hover:text-blue-800"
+                className="inline-block mt-3 text-blue-600 dark:text-blue-300 font-medium underline hover:text-blue-800"
               >
                 View on Google Maps
               </a>
@@ -63,7 +64,7 @@ function Contact({ dark }) {
         </div>
 
         {/* Phone */}
-        <div className="flex items-start gap-4 p-6 rounded-2xl border border-blue-100 dark:border-blue-800 bg-blue-50 dark:bg-gray-800 shadow hover:shadow-lg transition-all duration-300">
+        <div className="flex items-start gap-4 p-8 rounded-2xl border border-gray-200 dark:border-blue-700 bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-all duration-300">
           <span className="flex-shrink-0 text-blue-600 dark:text-blue-300">
             {/* Phone Icon */}
             <svg
@@ -82,18 +83,17 @@ function Contact({ dark }) {
             </svg>
           </span>
           <div className="text-left">
-            <h3 className="text-lg font-semibold mb-2 text-blue-900 dark:text-blue-200">
+            <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-blue-200">
               Phone Number
             </h3>
-            <p className="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-blue-100">
-              +91-xxxxxxxxx
-              <br /> +91-xxxxxxxxx
+            <p className="text-base font-medium text-gray-700 dark:text-blue-100">
+              +91-78470 24823
             </p>
           </div>
         </div>
 
         {/* Email */}
-        <div className="flex items-start gap-4 p-6 rounded-2xl border border-blue-100 dark:border-blue-800 bg-blue-50 dark:bg-gray-800 shadow hover:shadow-lg transition-all duration-300">
+        <div className="flex items-start gap-4 p-8 rounded-2xl border border-gray-200 dark:border-blue-700 bg-white dark:bg-gray-800 shadow-lg hover:shadow-2xl transition-all duration-300">
           <span className="flex-shrink-0 text-blue-600 dark:text-blue-300">
             {/* Mail Icon */}
             <svg
@@ -112,27 +112,26 @@ function Contact({ dark }) {
             </svg>
           </span>
           <div className="text-left">
-            <h3 className="text-lg font-semibold mb-2 text-blue-900 dark:text-blue-200">
+            <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-blue-200">
               Email Address
             </h3>
-            <p className="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-blue-100">
-              support@satabdi.com
-              <br /> contact@satabdi.com
+            <p className="text-base font-medium text-gray-700 dark:text-blue-100">
+              satabdiswain.julie@gmail.com
             </p>
           </div>
         </div>
       </div>
 
       {/* Google Map */}
-      <div className="w-full max-w-6xl rounded-xl overflow-hidden shadow-lg">
+      <div className="w-full max-w-7xl rounded-2xl overflow-hidden shadow-2xl">
         <iframe
           title="Google Map Location"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.217073585857!2d72.8310600752037!3d19.17377248203559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7b7b7b7b7b7%3A0x9TrdjihNkSfiB48g8!2s2690%20Hiltona%20Street%20Victoria%20Road%2C%20New%20York%2C%20Canada!5e0!3m2!1sen!2sin!4v1694367890123!5m2!1sen!2sin"
           width="100%"
-          height="350"
+          height="400"
           className="border-0"
           allowFullScreen
-          loading=""
+          loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>

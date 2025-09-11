@@ -8,21 +8,21 @@ function Testimonials() {
   const feedbacks = [
     {
       img: feedback1,
-      name: "Andrew Simon",
+      name: "Vishal Kumar",
       role: "Property Expert",
       review:
         "We loved our stay! The room was spotless, the staff was incredibly attentive, and the view from our balcony was breathtaking!",
     },
     {
-      img: feedback2,
+      img: feedback3,
       name: "Priya Sharma",
       role: "Travel Blogger",
       review:
         "Amazing experience! The spa and pool were top-notch, and the food at the restaurant was delicious.",
     },
     {
-      img: feedback3,
-      name: "Michael Lee",
+      img: feedback2,
+      name: "Sai Mohanty",
       role: "Business Analyst",
       review:
         "Perfect for business trips! Conference facilities were modern and staff was very helpful.",

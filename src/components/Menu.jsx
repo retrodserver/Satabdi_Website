@@ -46,8 +46,9 @@ function Menu() {
 
   return (
     <>
-      <section className="mt-16 py-16 px-4 sm:px-8 lg:px-32 bg-gradient-to-b from-blue-50 to-blue-100 dark:from-gray-900 dark:to-gray-800 text-blue-900">
-        <h2 className="text-4xl sm:text-5xl font-extrabold mb-12 text-center text-blue-900 dark:text-blue-200">
+      <section className="mt-16 py-16 px-4 sm:px-8 lg:px-32 bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-900 dark:to-gray-800 text-blue-900">
+        {/* Heading */}
+        <h2 className="text-4xl sm:text-5xl font-extrabold mb-12 text-center text-gray-800 dark:text-gray-100">
           Our Delicious Menu
         </h2>
 
@@ -56,7 +57,7 @@ function Menu() {
           {menuPhotos.map((item, idx) => (
             <div
               key={idx}
-              className="relative w-full mb-6 break-inside-avoid rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
+              className="relative w-full mb-6 break-inside-avoid rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-300"
             >
               <img
                 src={item.img}
@@ -73,8 +74,54 @@ function Menu() {
         </div>
 
         {/* Add New Menu Item Form */}
-        <div className="max-w-2xl mx-auto mt-12">
-          {/* ...existing code for form and menu list... */}
+        <div>
+          {/* <h3 className="text-2xl font-semibold mb-6 text-center text-gray-800 dark:text-gray-100">
+            Add a New Menu Item
+          </h3> */}
+          {/* <form
+            onSubmit={handleAdd}
+            className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-center justify-center"
+          >
+            <input
+              type="text"
+              name="name"
+              value={newItem.name}
+              onChange={handleChange}
+              placeholder="Dish Name"
+              className="w-full sm:flex-1 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+            />
+            <input
+              type="text"
+              name="price"
+              value={newItem.price}
+              onChange={handleChange}
+              placeholder="Price"
+              className="w-full sm:w-40 px-4 py-2 border rounded-lg focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-600 bg-gray-50 dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+            />
+            <button
+              type="submit"
+              className="px-6 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-900 transition"
+            >
+              Add
+            </button>
+          </form> */}
+
+          {/* Menu List */}
+          {/* <ul className="mt-8 space-y-4">
+            {menuItems.map((item, idx) => (
+              <li
+                key={idx}
+                className="flex justify-between items-center bg-gray-100 dark:bg-gray-800 px-4 py-2 rounded-lg shadow-sm"
+              >
+                <span className="font-medium text-gray-700 dark:text-gray-200">
+                  {item.name}
+                </span>
+                <span className="text-gray-600 dark:text-gray-300">
+                  {item.price}
+                </span>
+              </li>
+            ))}
+          </ul> */}
         </div>
       </section>
       <Footer />

@@ -122,7 +122,7 @@ function BlogDetail() {
 
             {/* Content */}
             <div className="text-gray-700 dark:text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed whitespace-pre-line">
-              {blog.content}
+              {blog.content.trim()}
             </div>
           </article>
 

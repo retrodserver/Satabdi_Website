@@ -54,8 +54,8 @@ function Footer() {
               Kalinga Studio, Plot No: 41C, Near Fitness Studio Gym<br />
               Bharatpur, Bhubaneswar, Odisha, 751003
             </p>
-            <p><span className="font-semibold">Phone:</span> +91-xxxxxxxxxx</p>
-            <p><span className="font-semibold">Email:</span> support@satabdi.com</p>
+            <p><span className="font-semibold">Phone:</span> +91-78470 24823</p>
+            <p><span className="font-semibold">Email:</span> satabdiswain.julie@gmail.com</p>
           </div>
         </div>
 
