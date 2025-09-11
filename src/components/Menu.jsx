@@ -33,15 +33,15 @@ function Menu() {
   };
 
   const menuPhotos = [
-    { img: menu1, label: "Welcome To Satabdi" },
-    { img: menu2, label: "Chicken Biryani" },
-    { img: menu3, label: "Veg Fried Rice" },
-    { img: menu4, label: "Tandoori Roti" },
-    { img: menu5, label: "Dal Makhani" },
-    { img: menu6, label: "Fish Curry" },
-    { img: menu7, label: "Mushroom Masala" },
-    { img: menu8, label: "Naan Bread" },
-    { img: menu9, label: "Dessert Platter" },
+    { img: menu1, label: "" },
+    { img: menu2, label: "" },
+    { img: menu3, label: "" },
+    { img: menu4, label: "" },
+    { img: menu5, label: "" },
+    { img: menu6, label: "" },
+    { img: menu7, label: "" },
+    { img: menu8, label: "" },
+    { img: menu9, label: "" },
   ];
 
   return (
