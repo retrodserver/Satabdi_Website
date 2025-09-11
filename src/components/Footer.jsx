@@ -15,7 +15,7 @@ function Footer() {
           <img src={logo} alt="Logo" className="w-32 sm:w-36 md:w-40 h-auto rounded-lg shadow-lg" />
           
           <div className="flex flex-col items-center md:items-start gap-4">
-            <h3 className="text-lg font-semibold tracking-wide">Explore Our Services</h3>
+            <h3 className="text-lg font-semibold tracking-wide">Explore Our Services:</h3>
             <Link to="/rooms" className="hover:text-yellow-300 transition-colors">Rooms</Link>
             <Link to="/services" className="hover:text-yellow-300 transition-colors">Services</Link>
             <Link to="/menu" className="hover:text-yellow-300 transition-colors">Menu</Link>
@@ -24,7 +24,7 @@ function Footer() {
 
         {/* Middle: Quick Links */}
         <div className="flex flex-col items-center md:items-start gap-5">
-          <h3 className="text-lg font-semibold tracking-wide">Quick Links</h3>
+          <h3 className="text-lg font-semibold tracking-wide">Quick Links:</h3>
           <Link to="/terms-services" className="hover:text-yellow-300 transition-colors">Terms of Service</Link>
           <Link to="/privacy-policy" className="hover:text-yellow-300 transition-colors">Privacy Policy</Link>
           <Link to="/cookies-policy" className="hover:text-yellow-300 transition-colors">Cookies</Link>
@@ -35,7 +35,7 @@ function Footer() {
           
           {/* Follow Us */}
           <div className="flex flex-col items-center md:items-start gap-4">
-            <h3 className="text-lg font-semibold tracking-wide">Follow Us</h3>
+            <h3 className="text-lg font-semibold tracking-wide">Follow Us:</h3>
             <div className="flex gap-4 sm:gap-6">
               <a href="#" aria-label="Facebook" className="hover:text-yellow-300 transition-transform transform hover:scale-110">
                 <FaFacebookF className="w-5 sm:w-6 h-5 sm:h-6" />
@@ -51,7 +51,7 @@ function Footer() {
 
           {/* Contact */}
           <div className="flex flex-col items-center md:items-start gap-2 mt-4">
-            <h3 className="text-lg font-semibold tracking-wide">Contact Us</h3>
+            <h3 className="text-lg font-semibold tracking-wide">Contact Us:</h3>
             <p className="opacity-90">
               Kalinga Studio, Plot No : 41C, Near Fitness Studio Gym<br />
               Bharatpur, Bhubaneswar, Odisha 751003

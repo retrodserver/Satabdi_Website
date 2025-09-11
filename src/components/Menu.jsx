@@ -33,7 +33,7 @@ function Menu() {
   };
 
   const menuPhotos = [
-    { img: menu1, label: "Paneer Butter Masala" },
+    { img: menu1, label: "Welcome To Satabdi" },
     { img: menu2, label: "Chicken Biryani" },
     { img: menu3, label: "Veg Fried Rice" },
     { img: menu4, label: "Tandoori Roti" },
