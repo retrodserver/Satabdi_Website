@@ -116,7 +116,7 @@ function Contact({ dark }) {
               Email Address
             </h3>
             <p className="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-blue-100">
-              support24@satabdi.com
+              support@satabdi.com
               <br /> contact@satabdi.com
             </p>
           </div>
@@ -132,7 +132,7 @@ function Contact({ dark }) {
           height="350"
           className="border-0"
           allowFullScreen
-          loading="lazy"
+          loading=""
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>

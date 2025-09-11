@@ -56,7 +56,7 @@ function Menu() {
           {menuPhotos.map((item, idx) => (
             <div
               key={idx}
-              className="relative w-full mb-6 break-inside-avoid rounded-3xl overflow-hidden shadow-2xl hover:scale-105 transition-transform cursor-pointer"
+              className="relative w-full mb-6 break-inside-avoid rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
             >
               <img
                 src={item.img}
