@@ -1,10 +1,11 @@
+// BlogDetail.jsx
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import Footer from "./Footer";
 import blog1 from "../assets/blog1.jpg";
 import blog2 from "../assets/blog2.jpg";
 import blog3 from "../assets/blog3.jpg";
-import blog4 from "../assets/blog4.jpg";
+import blog4 from "../assets/blog4.png";
 
 const blogData = [
   {
@@ -15,11 +16,14 @@ const blogData = [
     author: "Admin",
     img: blog1,
     content: `
-At Hotel Satabdi, we believe that true hospitality is a balance of modern luxury and timeless tradition. From the moment you step into our lobby, you are greeted with the warmth of local culture blended seamlessly with contemporary elegance.
+At Hotel Satabdi, we believe that true hospitality is a balance of modern luxury and timeless tradition. 
+Our elegantly designed rooms and suites provide comfort and style, while our personalized services ensure each guest feels special.
 
-Every corner of the hotel reflects the essence of tradition while ensuring comfort through state-of-the-art facilities. Whether it’s savoring authentic regional cuisines or enjoying our thoughtfully designed rooms, your stay with us will always feel like a homecoming wrapped in luxury.
+From the gourmet dining options to our state-of-the-art spa and fitness facilities, every detail is thoughtfully curated. 
+We also prioritize sustainable practices to make sure your stay is environmentally responsible.
 
-👉 Why choose Hotel Satabdi? Because we don’t just offer rooms, we offer experiences rooted in tradition with a modern touch.
+Whether you are traveling for leisure or business, Hotel Satabdi is committed to offering a memorable experience for all our guests. 
+We focus on creating an atmosphere that blends luxury, culture, and impeccable service.
     `,
   },
   {
@@ -30,11 +34,13 @@ Every corner of the hotel reflects the essence of tradition while ensuring comfo
     author: "Hotel Satabdi Team",
     img: blog2,
     content: `
-At Hotel Satabdi, our philosophy is simple—people come first. Every guest is unique, and we go the extra mile to ensure that your needs are not just met, but anticipated.
+Our philosophy is simple—people come first. Every staff member at Hotel Satabdi is trained to anticipate your needs and provide assistance proactively.
 
-From personalized check-ins to custom meal plans, our staff ensures that every detail of your stay is tailored to your comfort. Our concierge services are always available to assist you in exploring the city, recommending cultural gems, or arranging special surprises for your loved ones.
+We believe in building lasting relationships with our guests by delivering exceptional service that goes beyond expectations. 
+Our team listens carefully to feedback, continuously improving every aspect of your stay.
 
-Hospitality isn’t just about services—it’s about heartfelt connections. And that’s what makes Hotel Satabdi truly stand apart.
+Hospitality is not just a service, it’s an experience. 
+By combining cultural authenticity with modern convenience, we ensure that every guest feels at home.
     `,
   },
   {
@@ -45,11 +51,13 @@ Hospitality isn’t just about services—it’s about heartfelt connections. An
     author: "Guest Relations",
     img: blog3,
     content: `
-It’s the little things that make big differences. At Hotel Satabdi, we pride ourselves on attention to detail—because luxury lies in the finer touches.
+It’s the little things that make a big difference at Hotel Satabdi. From the perfectly folded towels to the curated mini-bar selection, every detail matters.
 
-From the placement of fresh flowers in your room to the curated dining experiences designed for every palate, our team ensures perfection at every step. Even the smallest aspects, like pillow preferences or dietary choices, are carefully noted to provide you with a seamless and delightful stay.
+Our rooms feature high-quality linens, ergonomic furniture, and ambient lighting designed to enhance comfort. 
+Even our in-room amenities are chosen to maximize convenience and luxury.
 
-When you choose Hotel Satabdi, you choose hospitality that notices the little things—so your big moments can be unforgettable.
+Attention to detail extends beyond rooms. 
+From restaurant presentation to concierge services, our goal is to make every aspect seamless and enjoyable.
     `,
   },
   {
@@ -60,13 +68,13 @@ When you choose Hotel Satabdi, you choose hospitality that notices the little th
     author: "Management",
     img: blog4,
     content: `
-Trust is the foundation of hospitality, and at Hotel Satabdi, we believe in complete transparency.
+Trust is the foundation of hospitality. At Hotel Satabdi, we maintain transparency in our policies, pricing, and communications.
 
-Our guests enjoy clear communication on pricing, services, and policies with no hidden surprises. Whether it’s our online booking, room facilities, or dining menus, everything is straightforward and designed to help you make the best choices for your stay.
+Guests are informed clearly about room rates, amenities, and any additional charges upfront. 
+Our team ensures that expectations are managed effectively so there are no surprises during your stay.
 
-This commitment to transparency not only builds trust but also ensures that your experience with us is stress-free, fair, and filled with peace of mind.
-
-At Hotel Satabdi, honesty isn’t just a policy—it’s our promise.
+Transparency extends to our sustainability practices, safety measures, and service commitments. 
+We believe that honesty and integrity are key to earning long-term loyalty from our guests.
     `,
   },
 ];
@@ -87,48 +95,58 @@ function BlogDetail() {
 
   return (
     <>
-      <section className="mt-16 py-10 px-4 sm:px-8 lg:px-16 bg-gray-50 dark:bg-gray-900 min-h-screen">
-        <div className="flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto">
+      <section className="mt-16 py-10 px-4 sm:px-8 lg:px-16 bg-gradient-to-b from-red-50 via-red-100 to-red-200 dark:from-gray-900 dark:to-gray-800 min-h-screen relative overflow-hidden">
+        {/* Decorative background */}
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+              radial-gradient(circle at 20% 30%, rgba(255,99,99,0.05), transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(255,150,150,0.08), transparent 50%)
+            `,
+            zIndex: 0,
+          }}
+        ></div>
+
+        <div className="relative z-10 flex flex-col lg:flex-row gap-10 max-w-7xl mx-auto">
           {/* Main Blog Content */}
-          <article className="flex-1 max-w-3xl mx-auto lg:mx-0 bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 lg:p-12">
-            {/* Back button */}
+          <article className="flex-1 max-w-3xl mx-auto lg:mx-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md rounded-3xl shadow-2xl p-8 lg:p-12 hover:shadow-3xl transition-all duration-500">
             <div className="mb-6">
               <Link
                 to="/blog"
-                className="text-blue-600 hover:underline text-sm"
+                className="text-red-700 dark:text-red-300 hover:underline text-sm font-medium"
               >
                 ← Back to Blogs
               </Link>
             </div>
 
-            {/* Blog Image */}
             <img
               src={blog.img}
               alt={`Cover for ${blog.title}`}
-              className="w-full h-auto object-cover mb-6 rounded-lg shadow"
+              className="w-full h-auto object-cover mb-6 rounded-xl shadow-lg hover:scale-105 transition-transform duration-500"
             />
 
-            {/* Title */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-900 dark:text-blue-200 mb-4 leading-snug">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-red-700 dark:text-red-300 mb-4 leading-snug">
               {blog.title}
             </h1>
 
             {/* Meta info */}
-            <div className="text-gray-500 text-sm sm:text-base mb-8 flex flex-wrap gap-3">
-              <span>{blog.date}</span>
-              <span>• {blog.read}</span>
-              <span>• ✍️ {blog.author}</span>
+            <div className="text-gray-500 dark:text-gray-400 text-sm sm:text-base mb-8 flex flex-wrap gap-3">
+              <span className="truncate">{blog.date}</span>
+              <span className="truncate">• {blog.read}</span>
+              <span className="truncate">• ✍️ {blog.author}</span>
             </div>
 
-            {/* Content */}
-            <div className="text-gray-700 dark:text-gray-300 text-base sm:text-lg lg:text-xl leading-relaxed whitespace-pre-line">
-              {blog.content.trim()}
+            <div className="text-gray-700 dark:text-gray-200 text-base sm:text-lg lg:text-xl leading-relaxed whitespace-pre-line">
+              <p className="first-letter:text-4xl first-letter:font-bold first-letter:text-red-700 dark:first-letter:text-red-300 first-letter:mr-2 first-letter:float-left">
+                {blog.content.trim()}
+              </p>
             </div>
           </article>
 
           {/* Sidebar: Other Blogs */}
           <aside className="w-full lg:w-1/3 flex-shrink-0 lg:sticky lg:top-24 lg:self-start">
-            <h2 className="text-lg font-semibold mb-4 text-blue-800 dark:text-blue-200">
+            <h2 className="text-xl font-semibold mb-6 text-red-700 dark:text-red-300">
               Other Blogs
             </h2>
             <div className="flex flex-col gap-6">
@@ -136,19 +154,20 @@ function BlogDetail() {
                 <Link
                   key={b.id}
                   to={`/blog/${b.id}`}
-                  className="flex gap-4 items-center hover:bg-blue-50 dark:hover:bg-gray-800 p-3 rounded-lg transition"
+                  className="flex gap-4 items-center bg-white/70 dark:bg-gray-800/70 p-4 rounded-2xl shadow hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 hover:scale-105"
                 >
                   <img
                     src={b.img}
                     alt={`Thumbnail for ${b.title}`}
-                    className="w-16 h-16 object-cover rounded"
+                    className="w-20 h-20 object-cover rounded-xl"
                   />
                   <div className="flex-1">
-                    <div className="font-medium text-blue-900 dark:text-blue-100 text-sm sm:text-base line-clamp-2">
+                    <div className="font-semibold text-red-700 dark:text-red-300 text-sm sm:text-base line-clamp-2">
                       {b.title}
                     </div>
-                    <div className="text-xs text-gray-500">
-                      {b.date} • {b.read}
+                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1 flex flex-wrap gap-1">
+                      <span className="truncate">{b.date}</span> •{" "}
+                      <span className="truncate">{b.read}</span>
                     </div>
                   </div>
                 </Link>

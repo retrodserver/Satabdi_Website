@@ -1,37 +1,56 @@
-import React, { useState } from "react";
-import bedroom2 from "../assets/gallery9.webp";
-import bedroom3 from "../assets/gallery10.webp";
-import gallery10webp from "../assets/gallery10.webp";
-import bedroom4 from "../assets/gallery11.webp";
+import React, { useState, useEffect } from "react";
 
-function PremiumRoomSlider() {
-  const images = [bedroom2, bedroom3];
+function PremiumRoomSlider({ images }) {
   const [current, setCurrent] = useState(0);
 
+  // Auto-slide every 3.5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  // Navigate manually
   const nextSlide = () => setCurrent((current + 1) % images.length);
   const prevSlide = () => setCurrent((current - 1 + images.length) % images.length);
 
   return (
-    <div className="relative w-full h-48 sm:h-56 mb-4 flex items-center justify-center">
-      <img
-        src={images[current]}
-        alt={`Premium Room ${current + 1}`}
-        className="w-full h-full object-cover rounded-lg shadow-lg"
-      />
-      <button
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-blue-600 text-white px-2 py-1 rounded-full"
-        onClick={prevSlide}
-        aria-label="Previous"
-      >
-        &#8592;
-      </button>
-      <button
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-600 text-white px-2 py-1 rounded-full"
-        onClick={nextSlide}
-        aria-label="Next"
-      >
-        &#8594;
-      </button>
+    <div className="relative w-full h-52 sm:h-60 md:h-64 lg:h-72 overflow-hidden rounded-2xl shadow-lg">
+      {/* Images */}
+      {images.map((img, idx) => (
+        <img
+          key={idx}
+          src={img}
+          alt={`Room ${idx + 1}`}
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out rounded-2xl ${
+            idx === current ? "opacity-100" : "opacity-0"
+          }`}
+        />
+      ))}
+
+      {/* Overlay for subtle glow */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent rounded-2xl pointer-events-none"></div>
+
+      {/* Navigation Buttons */}
+      {images.length > 1 && (
+        <>
+          <button
+            onClick={prevSlide}
+            className="absolute left-2 top-1/2 -translate-y-1/2 bg-red-600/70 hover:bg-red-700 text-white px-3 py-1 rounded-full shadow-lg transition transform hover:scale-110"
+            aria-label="Previous"
+          >
+            &#8592;
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-2 top-1/2 -translate-y-1/2 bg-red-600/70 hover:bg-red-700 text-white px-3 py-1 rounded-full shadow-lg transition transform hover:scale-110"
+            aria-label="Next"
+          >
+            &#8594;
+          </button>
+        </>
+      )}
     </div>
   );
 }

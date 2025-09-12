@@ -1,8 +1,9 @@
+// Header.jsx
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logo.jpg";
+import logo1 from "../assets/logo1.png";
 
-function Header({ dark, setDark }) {
+function Header() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -17,98 +18,89 @@ function Header({ dark, setDark }) {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 sm:px-6 md:px-8 py-3 transition ${
-        dark ? "bg-gray-900" : "bg-white"
-      }`}
+      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md border-b border-[#ffc6c6] shadow-md transition-all bg-white"
+      style={{
+        background: "linear-gradient(90deg, rgba(255,241,241,0.9) 0%, rgba(255,230,230,0.9) 50%, rgba(255,241,241,0.9) 100%)",
+      }}
     >
-      {/* Logo and Site Name */}
-      <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
-        <img
-          src={logo}
-          alt="Hotel Satabdi Logo"
-          className="h-10 sm:h-12 md:h-14 w-auto object-contain "
-        />
-        {/* <span className="font-extrabold text-lg sm:text-xl md:text-2xl bg-gradient-to-r from-blue-700 via-pink-500 to-red-500 bg-clip-text text-transparent tracking-widest italic truncate max-w-[150px] sm:max-w-[200px] md:max-w-[250px]">
-        </span> */}
-      </div>
-
-      {/* Desktop Navigation */}
-      <nav className="hidden md:flex gap-3 sm:gap-4 font-medium items-center flex-wrap">
-        {navLinks.map((link) => (
-          <Link
-            key={link.path}
-            to={link.path}
-            className={`px-3 py-1 rounded-full font-semibold transition text-sm sm:text-base ${
-              location.pathname === link.path
-                ? "bg-blue-100 text-blue-700"
-                : "hover:bg-blue-100 hover:text-blue-700"
-            }`}
-          >
-            {link.label}
-          </Link>
-        ))}
-        <button
-          type="button"
-          onClick={() => (window.location.href = "/rooms")}
-          className="ml-2 sm:ml-4 bg-gradient-to-r from-blue-600 to-blue-400 text-white px-4 sm:px-6 py-1 sm:py-2 rounded-full font-bold hover:scale-105 active:scale-95 transition-transform text-sm sm:text-base"
-        >
-          Bookings
-        </button>
-      </nav>
-
-      {/* Mobile Menu Toggle */}
-      <div className="flex items-center md:hidden">
-        <button
-          className="p-2 rounded focus:outline-none"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            {menuOpen ? (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M6 18L18 6M6 6l12 12"
-              />
-            ) : (
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            )}
-          </svg>
-        </button>
-      </div>
-
-      {/* Mobile Navigation */}
-      {menuOpen && (
-        <nav className="absolute top-full left-0 w-full bg-white dark:bg-gray-900 flex flex-col gap-2 font-medium px-4 py-3 shadow-md md:hidden">
+      <div className="flex items-center justify-between max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3 w-full">
+        {/* Logo left */}
+        <div className="flex items-center">
+          <img
+            src={logo1}
+            alt="Hotel Satabdi Logo"
+            className="h-14 sm:h-16 md:h-20 w-auto object-contain"
+          />
+        </div>
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex gap-6 items-center font-medium">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className="px-4 py-2 rounded-full hover:bg-blue-100 hover:text-blue-700 transition text-sm"
-              onClick={() => setMenuOpen(false)}
+              className={`relative px-3 py-2 rounded-full text-sm sm:text-base transition-all ${
+                location.pathname === link.path
+                  ? "text-[#ff7b7b] font-semibold before:absolute before:-bottom-1 before:left-1/2 before:-translate-x-1/2 before:w-8 before:h-1 before:rounded-full before:bg-gradient-to-r before:from-[#ffb3b3] before:to-[#ffc6c6]"
+                  : "text-gray-800 hover:text-[#ff7b7b] hover:before:opacity-100"
+              }`}
             >
               {link.label}
             </Link>
           ))}
+          {/* Bookings Button (desktop only) */}
           <Link
             to="/rooms"
-            className="bg-gradient-to-r from-blue-600 to-blue-400 text-white px-4 py-2 rounded-full font-bold hover:scale-105 transition text-sm"
-            onClick={() => setMenuOpen(false)}
+            className="bg-gradient-to-r from-[#ffb3b3] to-[#ffc6c6] text-gray-900 px-4 py-2 rounded-full font-semibold shadow-md"
           >
             Bookings
           </Link>
         </nav>
+        {/* Hamburger for mobile only */}
+        <div className="md:hidden flex items-center">
+          <button
+            className="p-2 rounded-full"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+            style={{ background: 'none', border: 'none' }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-8 h-8 text-black"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      {/* Hamburger Navigation (mobile only) */}
+      {menuOpen && (
+        <div
+          className="md:hidden fixed top-16 left-0 w-full bg-gradient-to-r from-[rgba(255,179,179,0.97)] via-[rgba(255,198,198,0.97)] to-[rgba(255,179,179,0.97)] shadow-lg z-50"
+        >
+          <nav className="flex flex-col gap-3 font-medium p-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`px-4 py-2 rounded-full text-gray-800 hover:bg-[rgba(255,230,230,0.9)] hover:text-[#ff7b7b] transition ${location.pathname === link.path ? 'font-bold text-[#ff7b7b]' : ''}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
+            {/* Bookings Button (mobile only) */}
+            <Link
+              to="/rooms"
+              className="bg-gradient-to-r from-[#ffb3b3] to-[#ffc6c6] text-gray-900 px-4 py-2 rounded-full font-semibold shadow-md mt-2"
+              onClick={() => setMenuOpen(false)}
+            >
+              Bookings
+            </Link>
+          </nav>
+        </div>
       )}
     </header>
   );
