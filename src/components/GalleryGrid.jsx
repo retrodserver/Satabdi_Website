@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
-import gallery from "../assets/mainview.jpg";
+import mainview from "../assets/mainview.jpg";
 import gallery1 from "../assets/gallery1.jpg";
 import gallery2 from "../assets/gallery2.jpg";
 import gallery3 from "../assets/gallery3.jpg";
@@ -17,7 +17,7 @@ import gallery14 from "../assets/gallery14.jpg";
 function GalleryGrid() {
   const [loadedImages, setLoadedImages] = useState({});
   const galleryImages = [
-    gallery, gallery1, gallery2, gallery3, gallery4, gallery5,
+    mainview, gallery1, gallery2, gallery3, gallery4, gallery5,
     gallery6, gallery7, gallery9, gallery10, gallery11,
     gallery13, gallery14,
   ];
