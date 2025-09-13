@@ -18,7 +18,6 @@ import CookiesPolicy from "./components/CookiesPolicy";
 import Menu from "./components/Menu";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
-import GalleryGrid from "./components/GalleryGrid";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -76,7 +75,6 @@ function App() {
           <Route path="/terms-services" element={<TermsServices />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/cookies-policy" element={<CookiesPolicy />} />
-          <Route path="/gallerygrid" element={<GalleryGrid />} />
         </Routes>
       </div>
     </Router>
