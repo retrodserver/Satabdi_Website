@@ -1,6 +1,6 @@
 import React from "react";
-import dining from "../assets/dining.JPG";
-import resturant from "../assets/resturant.JPG";
+import dining from "../assets/dining.jpg";
+import resturant from "../assets/resturant.jpg";
 
 const services = [
   { img: resturant, alt: "Luxury Experience", title: "Luxury Experience", text: "Elegant and spacious suites." },
