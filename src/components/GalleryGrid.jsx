@@ -8,7 +8,6 @@ import gallery4 from "../assets/gallery4.jpg";
 import gallery5 from "../assets/gallery5.jpg";
 import gallery6 from "../assets/gallery6.webp";
 import gallery7 from "../assets/gallery7.jpg";
-import gallery8 from "../assets/gallery8.jpg";
 import gallery9 from "../assets/gallery9.jpg";
 import gallery10 from "../assets/gallery10.jpg";
 import gallery11 from "../assets/gallery11.jpg";
@@ -19,7 +18,7 @@ function GalleryGrid() {
   const [loadedImages, setLoadedImages] = useState({});
   const galleryImages = [
     gallery, gallery1, gallery2, gallery3, gallery4, gallery5,
-    gallery6, gallery7, gallery8, gallery9, gallery10, gallery11,
+    gallery6, gallery7, gallery9, gallery10, gallery11,
     gallery13, gallery14,
   ];
 
