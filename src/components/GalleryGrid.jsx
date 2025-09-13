@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Footer from "./Footer";
-import gallery from "../assets/gallery.jpg";
+import gallery from "../assets/mainview.jpg";
 import gallery1 from "../assets/gallery1.jpg";
 import gallery2 from "../assets/gallery2.jpg";
 import gallery3 from "../assets/gallery3.jpg";

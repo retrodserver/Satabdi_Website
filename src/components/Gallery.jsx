@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import gallery1 from "../assets/gallery.jpg";
+import gallery1 from "../assets/mainview.jpg";
 import gallery2 from "../assets/gallery4.jpg";
 import gallery3 from "../assets/gallery3.jpg";
 import gallery4 from "../assets/gallery2.jpg";
